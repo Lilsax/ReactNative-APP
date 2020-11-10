@@ -7,8 +7,7 @@ function Lyrics({ navigation }) {
   const artist = navigation.params("artist");
   const albumID = navigation.params("album");
   const track = navigation.params("track");
-  const [data , setData] = useState("");
-
+  const [data, setData] = useState("");
 
   useEffect(() => {
     const dataAPI = async () => {
@@ -24,15 +23,13 @@ function Lyrics({ navigation }) {
     };
 
     dataAPI();
-
   }, []);
 
-  return <View>
-    <text style={{textAlign="center"}}>
-    {data}
-    </text>
-
-  </View>;
+  return (
+    <View>
+      <text style={{ textAlign: "center" }}>{data}</text>
+    </View>
+  );
 }
 
 export default Lyrics;
